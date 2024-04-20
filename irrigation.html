@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigational Tool</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui;
+        }
+        #seedsnav {
+            text-align: center;
+            font-weight: bold;
+            background-color: #1c5b70;
+            font-size: 55px;
+            color: rgb(255, 255, 255);
+            padding: 5px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .seed-item {
+            text-align: center;
+            border: 2px solid hsl(25, 12%, 80%);
+            padding: 20px;
+            width: 300px;
+            height: 100%; /* Ensure all seed items have equal height */
+            display: flex; /* Use flexbox for alignment */
+            flex-direction: column; /* Align children vertically */
+            justify-content: space-between; /* Distribute space evenly between children */
+            margin: 10px;
+        }
+        
+        .seed-item .images {
+            flex: 1; /* Allow the image div to grow to fill available space */
+            display: flex;
+            align-items: center; /* Center the image vertically */
+            justify-content: center; /* Center the image horizontally */
+        }
+        
+        .seed-item .text {
+            flex: 1; /* Allow the text div to grow to fill available space */
+        }
+        
+        .seed-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .seed-item h2,
+        .seed-item p {
+            margin: 10px 0; /* Adjusted margin for better spacing */
+        }
+        
+        .seed-item button {
+            background-color: #1c5b70;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px; /* Added margin for better spacing */
+        }
+        .lastnav {
+            text-align: center;
+            font-weight: bold;
+            background-color: #1c5b70;
+            font-size: 18px;
+            font-family: system-ui;
+            color: rgb(255, 255, 255);
+            padding: 20px 0;
+        }
+
+        .lastnav a {
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav id="seedsnav">
+        <p>Irrigational Tools</p>
+    </nav>
+
+    <div class="container">
+        <!-- Seed Item 1 -->
+        <div class="seed-item">
+            <div class="images">
+                <img src="dripirrigation.jpg" alt="Drip system">
+            </div>
+            <div class="text">
+                <h2>Drip system</h2>
+                <p>2000/-</p>
+                <button>Buy</button>
+                <button>Rent</button>
+            </div>
+        </div>
+
+        <!-- Seed Item 2 -->
+        <div class="seed-item">
+            <div class="images">
+                <img src="furrowirrigation.jpg" alt="furrow irrigation">
+            </div>
+            <div class="text">
+                <h2>furrow irrigation</h2>
+                <p>100/- per meter</p>
+                <button>Buy</button>
+                <button>Rent</button>
+            </div>
+        </div>
+
+        <!-- Repeat the same structure for remaining seed items -->
+        <!-- Seed Item 3 -->
+        <div class="seed-item">
+            <div class="images">
+                <img src="center-pivot-2.webp" alt="center-pivot">
+            </div>
+            <div class="text">
+                <h2>center-pivot</h2>
+                <p>9000/-</p>
+                <button>Buy</button>
+                <button>Rent</button>
+            </div>
+        </div>
+
+        <!-- Seed Item 4 -->
+        <div class="seed-item">
+            <div class="images">
+                <img src="sprinkler.jpg" alt="sprinkler system">
+            </div>
+            <div class="text">
+                <h2>sprinkler system</h2>
+                <p>100/- per meter</p>
+                <button>Buy</button>
+                <button>Rent</button>
+            </div>
+        </div>
+
+        <!-- Seed Item 5 -->
+        <div class="seed-item">
+            <div class="images">
+                <img src="subsurface irrigation.jpg" alt="subsurface irrigation">
+            </div>
+            <div class="text">
+                <h2>subsurface irrigation</h2>
+                <p>300/- per meter</p>
+                <button>Buy</button>
+                <button>Rent</button>
+            </div>
+        </div>
+
+    
+    </div>
+
+    <nav class="lastnav">
+        <a href="index.html">Back</a>
+    </nav>
+</body>
+</html>

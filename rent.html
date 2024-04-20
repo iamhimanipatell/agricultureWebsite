@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Login</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .form-container {
+        max-width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      h2 {
+        text-align: center;
+        color:#4ea85d; /* Blue color */
+      }
+      input[type="text"], input[type="tel"], input[type="password"], select, input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #4ea85d; /* Blue color */
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color:#4ea85d; /* Darker shade of blue on hover */
+      }
+      .side-images {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .side-images img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 8px;
+      }
+      .back-link {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .back-link a {
+        color: #4ea85d;
+        text-decoration: none;
+      }
+      .back-link a:hover {
+        text-decoration: underline;
+      }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="form-container">
+    <div class="side-images">
+      <!-- Add images if needed -->
+    </div>
+    <h2>Login | <span style="color:#4ea85d;">Sign Up</span></h2>
+    <form action="your_server_script.php" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="contact">Contact Number</label>
+      <input type="tel" id="contact" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <!-- New input field for rent duration -->
+      <label for="duration">Rent Duration</label>
+      <select id="duration" name="duration" required>
+        <option value="">Select Duration</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+
+      <label for="start_date">Start Date</label>
+      <input type="date" id="start_date" name="start_date" min="2024-04-20" required>
+
+      <!-- Additional input fields or options can be added here -->
+
+      <input type="submit" value="Login">
+    </form>
+    <div class="back-link">
+      <a href="index.html">Back to Main Page</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

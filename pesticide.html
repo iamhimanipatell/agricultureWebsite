@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesticides</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui;
+        }
+        #seedsnav {
+            text-align: center;
+            font-weight: bold;
+            background-color: #1c5b70;
+            font-size: 55px;
+            color: #ffffff;
+            padding: 5px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .container > div {
+            text-align: center;
+            border: 2px solid hsl(25, 12%, 80%);
+            padding: 10px;
+            width: 250px;
+            margin: 10px;
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container button {
+            margin-top: 10px;
+            background-color: #1c5b70;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .lastnav {
+            text-align: center;
+            font-weight: bold;
+            background-color: #1c5b70;
+            font-size: 18px;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        .lastnav a {
+            color: #ffffff;
+            text-decoration: none; /* Added to remove underline from the link */
+        }
+    </style>
+</head>
+<body>
+    <nav id="seedsnav">
+        <p>Pesticides</p>
+    </nav>
+
+    <div class="container">
+        <div id="div1">
+            <div class="images">
+                <img src="pesatlas.jpg" alt="atlas">
+            </div>
+            <div class="text">
+                <h>Atlas<br>180/-</h><br>
+                <button>Buy</button>
+            </div>
+        </div>
+        <div id="div2">
+            <div class="images">
+                <img src="pescarbine20.jpg" alt="carbine20%">
+            </div>
+            <div class="text">
+                <h>Carbine 20%<br>130/-</h><br>
+                <button>Buy</button>
+            </div>
+        </div>
+        <div id="div3">
+            <div class="images">
+                <img src="pesdcon.jpg" alt="d-con">
+            </div>
+            <div class="text">
+                <h>D-con<br>310/-</h><br>
+                <button>Buy</button>
+            </div>
+        </div>
+        <div id="div4">
+            <div class="images">
+                <img src="pesrefen.webp" alt="refren">
+            </div>
+            <div class="text">
+                <h>Refren<br>540/-</h><br>
+                <button>Buy</button>
+            </div>
+        </div>
+        <div id="div5">
+            <div class="images">
+                <img src="pestebucon.jpg" alt="tebucon">
+            </div>
+            <div class="text">
+                <h>pestebucon<br>110/-</h><br>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+    <nav class="lastnav">
+        <a href="index.html">Back</a>
+    </nav>
+</body>
+</html>
