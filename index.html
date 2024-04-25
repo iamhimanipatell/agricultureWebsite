@@ -56,7 +56,7 @@
         }
 
         .div1 {
-            background-color: #1c5b70;
+            background-color: #1c5a6e;
             color: white;
             text-align: center;
             padding: 20px;
@@ -116,6 +116,36 @@
     <p>Email: seedsandsoil@gmail.com</p>
     <p>Contact no: 9012323478</p>
 </div>
+
+
+    <script>
+        // JavaScript code
+        var navbar = document.querySelector('.navbar');
+        var bottomBar = document.querySelector('.div1');
+    
+        // For navbar
+        navbar.addEventListener('mouseover', function() {
+            navbar.style.backgroundColor = '#092e3a'; // Change to a slightly lighter color on mouseover
+        });
+    
+        navbar.addEventListener('mouseout', function() {
+            navbar.style.backgroundColor = '#1c5a6e'; // Revert back to the original color on mouseout
+        });
+    
+        // For bottom bar
+        bottomBar.addEventListener('mouseover', function() {
+            bottomBar.style.backgroundColor = '#092e3a'; // Change to a slightly lighter color on mouseover
+        });
+    
+        bottomBar.addEventListener('mouseout', function() {
+            bottomBar.style.backgroundColor = '#1c5a6e'; // Revert back to the original color on mouseout
+        });
+    </script>
+    
+
+
+
+
 
 </body>
 </html>

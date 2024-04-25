@@ -7,7 +7,7 @@
   <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        background-color: #a6d38f;
         margin: 0;
         padding: 0;
       }
@@ -75,46 +75,93 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="form-container">
-    <div class="side-images">
-      <!-- Add images if needed -->
-    </div>
-    <h2>Login | <span style="color:#4ea85d;">Sign Up</span></h2>
-    <form action="your_server_script.php" method="post">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+  <div class="container">
+    <div class="form-container">
+      <div class="side-images">
+        <!-- Add images if needed -->
+      </div>
+      <h2>Login | <span style="color:#4ea85d;">Sign Up</span></h2>
+      <form action="your_server_script.php" method="post" onsubmit="return validateForm()">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+  
+        <label for="contact">Contact Number</label>
+        <!-- Removed the pattern attribute -->
+        <input type="tel" id="contact" name="contact" required>
+  
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+  
+        <!-- Modified input field for rent duration -->
+        <label for="duration">Rent Duration</label>
+        <select id="duration" name="duration" onchange="showDurationOptions()" required>
+          <option value="">Select Duration</option>
+          <option value="weeks">Weekly</option> <!-- Changed value to "weeks" -->
+          <option value="months">Monthly</option> <!-- Changed value to "months" -->
+        </select>
 
-      <label for="address">Address</label>
-      <input type="text" id="address" name="address" required>
-
-      <label for="contact">Contact Number</label>
-      <input type="tel" id="contact" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
-
-      <!-- New input field for rent duration -->
-      <label for="duration">Rent Duration</label>
-      <select id="duration" name="duration" required>
-        <option value="">Select Duration</option>
-        <option value="daily">Daily</option>
-        <option value="weekly">Weekly</option>
-        <option value="monthly">Monthly</option>
-      </select>
-
-      <label for="start_date">Start Date</label>
-      <input type="date" id="start_date" name="start_date" min="2024-04-20" required>
-
-      <!-- Additional input fields or options can be added here -->
-
-      <input type="submit" value="Login">
-    </form>
-    <div class="back-link">
-      <a href="index.html">Back to Main Page</a>
+        <!-- Additional input fields or options can be added here -->
+        <div id="durationOptions" style="display:none;">
+          <label id="durationLabel" for="durationSelection"></label>
+          <select id="durationSelection" name="durationSelection"></select>
+        </div>
+  
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" name="start_date" min="2024-04-20" required>
+  
+        <input type="submit" value="Login">
+      </form>
+      <div class="back-link">
+        <a href="index.html">Back to Main Page</a>
+      </div>
     </div>
   </div>
-</div>
+  
+  <script>
+    // This function is called when the form is submitted
+    function validateForm() {
+      // Display an alert message to indicate that the process is successful
+      alert("Process successful");
+  
+      // Prevent the default form submission behavior
+      return false;
+    }
 
-</body>
-</html>
+    // This function shows duration options based on the selected duration
+    function showDurationOptions() {
+      var duration = document.getElementById("duration").value;
+      var durationOptionsDiv = document.getElementById("durationOptions");
+
+      if (duration === "weeks") { // Changed to "weeks"
+        document.getElementById("durationLabel").innerText = "Number of Weeks"; // Changed label text to "Number of Weeks"
+        durationOptionsDiv.style.display = "block";
+        var durationSelection = document.getElementById("durationSelection");
+        durationSelection.innerHTML = "";
+        for (var i = 1; i <= 4; i++) { // Changed to maximum of 4 weeks
+          var option = document.createElement("option");
+          option.text = i;
+          option.value = i;
+          durationSelection.add(option);
+        }
+      } else if (duration === "months") { // Changed to "months"
+        document.getElementById("durationLabel").innerText = "Number of Months"; // Changed label text to "Number of Months"
+        durationOptionsDiv.style.display = "block";
+        var durationSelection = document.getElementById("durationSelection");
+        durationSelection.innerHTML = "";
+        for (var i = 1; i <= 12; i++) { // Changed to maximum of 12 months
+          var option = document.createElement("option");
+          option.text = i;
+          option.value = i;
+          durationSelection.add(option);
+        }
+      } else {
+        durationOptionsDiv.style.display = "none";
+      }
+    }
+  </script>
+  
+  </body>
+  </html>
