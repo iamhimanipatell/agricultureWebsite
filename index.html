@@ -11,14 +11,22 @@
         }
 
         .navbar {
-            text-align: center;
-            font-weight: bold;
-            background-color: #1c5b70;
-            font-size: 55px;
-            font-family: system-ui;
-            color: rgb(255, 255, 255);
-            padding: 55px;
-        }
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    font-weight: bold;
+    background-color: #1c5b70;
+    font-size: 40px; /* Reduced size */
+    font-family: system-ui;
+    color: rgb(255, 255, 255);
+    padding: 20px; /* Reduced padding */
+}
+
+.maindiv {
+    margin-top: 100px; /* Push content down to avoid overlap */
+}
 
         .nav {
             display: flex;
@@ -66,6 +74,10 @@
 <body>
 
 <div class="maindiv">
+    <div id="navbar-container"></div>
+
+<script src="index.js"></script>
+
 
     <nav class="navbar">Seeds & Soil</nav>
    
