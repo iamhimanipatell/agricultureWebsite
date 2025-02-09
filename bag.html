@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bag - Seeds & Soil</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f2e9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #4e7339;
+            text-align: center;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        .item-info {
+            flex-grow: 1;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .quantity button {
+            background-color: #4e7339;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .remove {
+            background-color: #b22222;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4e7339;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #1c5b70;
+            font-size: 20px;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-title">Seeds & Soil</a>
+        <div class="nav-links">
+            <a href="aboutus.html">About Us</a>
+            <a href="seeds.html">Seeds</a>
+            <a href="irrigation.html">Irrigation Tools</a>
+            <a href="fertilizer.html">Fertilizers</a>
+            <a href="pesticide.html">Pesticides</a>
+            <a href="loginOrSignup.html">Login/Sign Up</a>
+            <a href="bag.html">Bag</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Your Bag</h1>
+        <div id="bag-items">
+            <!-- Items will be dynamically added here -->
+        </div>
+        <div class="total">Total: $<span id="total-amount">0.00</span></div>
+        <a href="index.html" class="back-link">Back to Main Page</a>
+    </div>
+
+    <script>
+        let bagItems = [
+            { id: 1, name: "Rajma Seeds", price: 180, quantity: 1 },
+            { id: 2, name: "Drip Irrigation System", price: 2000, quantity: 1 }
+        ];
+
+        function renderBag() {
+            const bagItemsElement = document.getElementById('bag-items');
+            bagItemsElement.innerHTML = '';
+            
+            bagItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'item';
+                itemElement.innerHTML = `
+                    <div class="item-info">
+                        <h3>${item.name}</h3>
+                        <p>Price: $${item.price}</p>
+                    </div>
+                    <div class="quantity">
+                        <button onclick="changeQuantity(${item.id}, -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="changeQuantity(${item.id}, 1)">+</button>
+                    </div>
+                    <button class="remove" onclick="removeItem(${item.id})">Remove</button>
+                `;
+                bagItemsElement.appendChild(itemElement);
+            });
+
+            updateTotal();
+        }
+
+        function changeQuantity(id, change) {
+            const item = bagItems.find(item => item.id === id);
+            if (item) {
+                item.quantity = Math.max(0, item.quantity + change);
+                if (item.quantity === 0) {
+                    removeItem(id);
+                } else {
+                    renderBag();
+                }
+            }
+        }
+
+        function removeItem(id) {
+            bagItems = bagItems.filter(item => item.id !== id);
+            renderBag();
+        }
+
+        function updateTotal() {
+            const total = bagItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            document.getElementById('total-amount').textContent = total.toFixed(2);
+        }
+
+        renderBag();
+    </script>
+</body>
+</html>

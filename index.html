@@ -7,157 +7,130 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f2e9;
         }
 
         .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    text-align: center;
-    font-weight: bold;
-    background-color: #1c5b70;
-    font-size: 40px; /* Reduced size */
-    font-family: system-ui;
-    color: rgb(255, 255, 255);
-    padding: 20px; /* Reduced padding */
-}
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            font-weight: bold;
+            background: linear-gradient(135deg, #4e7339, #2d4a27);
+            font-size: 28px;
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
 
-.maindiv {
-    margin-top: 100px; /* Push content down to avoid overlap */
-}
+        .maindiv {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+        }
 
         .nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
         }
 
         .links {
-            padding: 20px;
-            margin: 20px;
+            text-decoration: none;
+            color: #2d4a27;
             text-align: center;
-            transition: transform 0.3s ease-in-out;
-            display: flex; /* Align items in flex layout */
-            align-items: center; /* Center items vertically */
-            flex-direction: column; /* Arrange image and text vertically */
-            text-decoration: none; /* Remove default link underline */
-        }
-
-        .links img {
-            width: 115px; /* Increase image width */
-            height: 115px; /* Increase image height */
-            border-radius: 30%; /* Make the image circular */
-            margin-bottom: 10px; /* Add space between image and text */
-        }
-
-        .links a {
-            text-decoration: none; /* Remove default link underline */
-            color: black; /* Set text color */
+            background: #d7c6a7;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            width: 180px;
         }
 
         .links:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .links img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            border: 3px solid #4e7339;
         }
 
         .div1 {
-            background-color: #1c5a6e;
+            background: linear-gradient(135deg, #4e7339, #2d4a27);
             color: white;
             text-align: center;
             padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-<div class="maindiv">
-    <div id="navbar-container"></div>
-
-<script src="index.js"></script>
-
-
     <nav class="navbar">Seeds & Soil</nav>
    
-    <div class="nav">
-        
-        <div class="links">
-            <a href="aboutus.html">
-                <img src="aboutuslogoo.jpg" alt="Your Image" class="circular-image">
-                <h3>About Us</h3>
-            </a>
-        </div>
-        <div class="links">
-            <a href="seeds.html">
-                <img src="seedslogo.jpg" alt="Your Image" class="circular-image">
-                <h3>Seeds</h3>
-            </a>
-        </div>
-        <div class="links">
-            <a href="irrigation.html">
-                <img src="irrigationlogoo.png" alt="Your Image" class="circular-image">
-                <h3>Irrigation Tools</h3>
-            </a>
-        </div>
-        <div class="links">
-            <a href="fertilizer.html">
-                <img src="fertilizerlogoo.jpg" alt="Your Image" class="circular-image">
-                <h3>Fertilizers</h3>
-            </a>
-        </div>
-        <div class="links">
-            <a href="pesticide.html">
-                <img src="pesticideslogoo.png" alt="Your Image" class="circular-image">
-                <h3>Pesticides</h3>
-            </a>
-        </div>
-        <div class="links">
-            <a href="loginOrSignup.html">
-                <img src="loginlogoo.jpg" alt="Your Image" class="circular-image">
-                <h3>Login/Sign up</h3>
-            </a>
+    <div class="maindiv">
+        <div class="nav">
+            <div class="links">
+                <a href="aboutus.html">
+                    <img src="aboutuslogoo.jpg" alt="About Us">
+                    <h3>About Us</h3>
+                </a>
+            </div>
+            <div class="links">
+                <a href="seeds.html">
+                    <img src="seedslogo.jpg" alt="Seeds">
+                    <h3>Seeds</h3>
+                </a>
+            </div>
+            <div class="links">
+                <a href="irrigation.html">
+                    <img src="irrigationlogoo.png" alt="Irrigation Tools">
+                    <h3>Irrigation Tools</h3>
+                </a>
+            </div>
+            <div class="links">
+                <a href="fertilizer.html">
+                    <img src="fertilizerlogoo.jpg" alt="Fertilizers">
+                    <h3>Fertilizers</h3>
+                </a>
+            </div>
+            <div class="links">
+                <a href="pesticide.html">
+                    <img src="pesticideslogoo.png" alt="Pesticides">
+                    <h3>Pesticides</h3>
+                </a>
+            </div>
+            <div class="links">
+                <a href="loginOrSignup.html">
+                    <img src="loginlogoo.jpg" alt="Login/Sign up">
+                    <h3>Login/Sign up</h3>
+                </a>
+            </div>
+            <div class="links">
+                <a href="bag.html">
+                    <img src="data:image/jpeg;base64, ..." alt="Bag">
+                    <h3>Bag</h3>
+                </a>
+            </div>
         </div>
     </div>
 
-</div>
-
-<div class="div1">
-    <h3>For any query or complaint contact:</h3>
-    <p>Email: seedsandsoil@gmail.com</p>
-    <p>Contact no: 9012323478</p>
-</div>
-
-
-    <script>
-        // JavaScript code
-        var navbar = document.querySelector('.navbar');
-        var bottomBar = document.querySelector('.div1');
-    
-        // For navbar
-        navbar.addEventListener('mouseover', function() {
-            navbar.style.backgroundColor = '#092e3a'; // Change to a slightly lighter color on mouseover
-        });
-    
-        navbar.addEventListener('mouseout', function() {
-            navbar.style.backgroundColor = '#1c5a6e'; // Revert back to the original color on mouseout
-        });
-    
-        // For bottom bar
-        bottomBar.addEventListener('mouseover', function() {
-            bottomBar.style.backgroundColor = '#092e3a'; // Change to a slightly lighter color on mouseover
-        });
-    
-        bottomBar.addEventListener('mouseout', function() {
-            bottomBar.style.backgroundColor = '#1c5a6e'; // Revert back to the original color on mouseout
-        });
-    </script>
-    
-
-
-
-
+    <div class="div1">
+        <h3>For any query or complaint contact:</h3>
+        <p>Email: seedsandsoil@gmail.com</p>
+        <p>Contact no: 9012323478</p>
+    </div>
 
 </body>
 </html>

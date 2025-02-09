@@ -3,80 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us - Seeds & Soil</title>
     <style>
-        /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f2e9;
         }
-        /* Header Styles */
-        #navid {
+
+        .navbar {
             text-align: center;
             font-weight: bold;
-            background-color: #1c5b70;
-            font-size: 55px;
-            font-family: system-ui;
-            color: rgb(255, 255, 255);
-            padding: 55px;
+            background: linear-gradient(135deg, #4e7339, #2d4a27);
+            font-size: 32px;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        /* Main Content Styles */
-        #container {
+
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 2rem;
+            margin: 50px auto;
+            max-width: 1100px;
+            padding: 20px;
         }
-        #div1 {
+
+        .content-box {
             background-color: #fff;
-            color: #333;
-            font-size: 1.125rem;
+            color: #2d4a27;
+            font-size: 1.2rem;
             font-weight: 300;
-            width: 70%;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
             text-align: center;
-            margin-top:41px;
+            line-height: 1.6;
         }
-        /* Footer Styles */
-        .lastnav {
+
+        .footer {
             text-align: center;
             font-weight: bold;
-            background-color: #1c5b70;
+            background: linear-gradient(135deg, #4e7339, #2d4a27);
             font-size: 1rem;
             color: #fff;
             padding: 1rem 0;
-            margin-top: 60px;
+            margin-top: 50px;
         }
-        .lastnav a {
+
+        .footer a {
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .lastnav a:hover {
+
+        .footer a:hover {
             color: #f8b400;
         }
-       
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #1c5b70;
+            font-size: 20px;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar1{
+        color: black;
+        }
+
     </style>
 </head>
 <body>
-<nav id="navid">About Us</nav>
-<div id="container">
-    <div id="div1">
-       
-        <p>Welcome to Seeds & Soil! We're proud to introduce an unique approach to gardening and farming with our range of irrigation tools available for rent. In addition to offering premium quality seeds, fertilizers, and pesticides, we prioritize sourcing these products from local sellers who, unfortunately, may be unable to maintain their own shops. By patronizing Seeds & Soil, you're not only gaining access to top-notch supplies but also contributing to the livelihoods of these local shopkeepers. Each item undergoes meticulous examination by our team to ensure the highest standards of quality and effectiveness.
-            <br><br>
-            At Seeds & Soil, we're committed to simplifying the purchasing process. Our website is designed to streamline communication, bypassing the need for traditional email exchanges. Instead, we prioritize direct interaction through phone numbers and SMS, ensuring swift and efficient service. If you're a seller looking to offload your irrigation tools or other agricultural equipment, don't hesitate to reach out to us using the contact details provided. Join us in cultivating a greener tomorrow while supporting local businesses – choose Seeds & Soil for all your gardening and farming needs!</p>
+    <nav class="navbar">
+        <a href="index.html" class="nav-title">Seeds & Soil</a>
+        <div class="nav-links">
+            <a href="aboutus.html">About Us</a>
+            <a href="seeds.html">Seeds</a>
+            <a href="irrigation.html">Irrigation Tools</a>
+            <a href="fertilizer.html">Fertilizers</a>
+            <a href="pesticide.html">Pesticides</a>
+            <a href="loginOrSignup.html">Login/Sign Up</a>
+            <a href="bag.html">Bag</a>
+        </div>
+    </nav>
+
+<nav class="navbar1">About Us</nav>
+
+<div class="container">
+    <div class="content-box">
+        <p>Welcome to Seeds & Soil! We take pride in offering high-quality gardening and farming supplies, including seeds, fertilizers, and pesticides, sourced from local sellers who may not have their own storefronts. By choosing Seeds & Soil, you're not just purchasing top-notch products, but also supporting local businesses.
+        <br><br>
+        Our range includes irrigation tools available for rent, making farming more accessible and affordable. Each product undergoes strict quality checks to ensure effectiveness. Unlike traditional platforms, our website simplifies communication by allowing direct contact through phone numbers and SMS instead of emails. 
+        <br><br>
+        If you're a seller looking to list your irrigation tools or farming supplies, reach out to us today. Together, let's cultivate a greener future while empowering small businesses!</p>
     </div>
 </div>
-<nav class="lastnav">
+
+<nav class="footer">
     <a href="index.html">Back</a>
 </nav>
-<div id="navbar-container"></div>
-
-<script src="index.js"></script>
 
 </body>
 </html>

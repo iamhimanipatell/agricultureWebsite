@@ -61,12 +61,37 @@
         .lastnav a {
             color: white;
         }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #1c5b70;
+            font-size: 20px;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
     </style> 
 </head>
 <body>
-    <nav id="seedsnav">
-        <p>Fertilizer</p>
+    <nav class="navbar">
+        <a href="index.html" class="nav-title">Seeds & Soil</a>
+        <div class="nav-links">
+            <a href="aboutus.html">About Us</a>
+            <a href="seeds.html">Seeds</a>
+            <a href="irrigation.html">Irrigation Tools</a>
+            <a href="fertilizer.html">Fertilizers</a>
+            <a href="pesticide.html">Pesticides</a>
+            <a href="loginOrSignup.html">Login/Sign Up</a>
+            <a href="bag.html">Bag</a>
+        </div>
     </nav>
+
 
     <div class="container">
     <div id="div1">
@@ -143,5 +168,8 @@
 <nav class="lastnav">
     <a href="index.html">Back</a>
 </nav>
+
+<script src="Search.js"></script>
+
 </body>
 </html>

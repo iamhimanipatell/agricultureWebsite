@@ -3,121 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesticides</title>
+    <title>Pesticides - Seeds & Soil</title>
     <style>
         body {
             margin: 0;
-            font-family: system-ui;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f2e9;
         }
-        #seedsnav {
-            text-align: center;
-            font-weight: bold;
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
             background-color: #1c5b70;
-            font-size: 55px;
-            color: #ffffff;
-            padding: 5px;
-        }
-        .container {
+            font-size: 20px;
+            color: white;
+            padding: 15px 20px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f8b400;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            padding: 20px;
+            padding: 40px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
+            margin-top: 80px;
         }
-        .container > div {
+
+        .pesticide-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
             text-align: center;
-            border: 2px solid hsl(25, 12%, 80%);
-            padding: 10px;
-            width: 250px;
-            margin: 10px;
+            transition: transform 0.3s ease;
         }
-        .container img {
+
+        .pesticide-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .pesticide-item img {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
         }
-        .container button {
-            margin-top: 10px;
-            background-color: #1c5b70;
-            color: #ffffff;
+
+        .pesticide-item h2 {
+            color: #2d4a27;
+            font-size: 1.4rem;
+            margin: 10px 0;
+        }
+
+        .pesticide-item p {
+            color: #4e7339;
+            font-size: 1.2rem;
+        }
+
+        .pesticide-item button {
+            background-color: #4e7339;
+            color: #fff;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
         }
-        .lastnav {
+
+        .pesticide-item button:hover {
+            background-color: #2d4a27;
+        }
+
+        .footer {
             text-align: center;
             font-weight: bold;
-            background-color: #1c5b70;
-            font-size: 18px;
-            color: #ffffff;
-            padding: 20px 0;
+            background: linear-gradient(135deg, #4e7339, #2d4a27);
+            font-size: 1rem;
+            color: #fff;
+            padding: 1rem 0;
+            margin-top: 50px;
         }
-        .lastnav a {
-            color: #ffffff;
-            text-decoration: none; /* Added to remove underline from the link */
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #f8b400;
         }
     </style>
 </head>
 <body>
-    <nav id="seedsnav">
-        <p>Pesticides</p>
-    </nav>
 
-    <div class="container">
-        <div id="div1">
-            <div class="images">
-                <img src="pesatlas.jpg" alt="atlas">
-            </div>
-            <div class="text">
-                <h>Atlas<br>180/-</h><br>
-                <button>Buy</button>
-            </div>
-        </div>
-        <div id="div2">
-            <div class="images">
-                <img src="pescarbine20.jpg" alt="carbine20%">
-            </div>
-            <div class="text">
-                <h>Carbine 20%<br>130/-</h><br>
-                <button>Buy</button>
-            </div>
-        </div>
-        <div id="div3">
-            <div class="images">
-                <img src="pesdcon.jpg" alt="d-con">
-            </div>
-            <div class="text">
-                <h>D-con<br>310/-</h><br>
-                <button>Buy</button>
-            </div>
-        </div>
-        <div id="div4">
-            <div class="images">
-                <img src="pesrefen.webp" alt="refren">
-            </div>
-            <div class="text">
-                <h>Refren<br>540/-</h><br>
-                <button>Buy</button>
-            </div>
-        </div>
-        <div id="div5">
-            <div class="images">
-                <img src="pestebucon.jpg" alt="tebucon">
-            </div>
-            <div class="text">
-                <h>pestebucon<br>110/-</h><br>
-                <button>Buy</button>
-            </div>
-        </div>
+<nav class="navbar">
+    <a href="index.html" class="nav-title">Seeds & Soil</a>
+    <div class="nav-links">
+        <a href="aboutus.html">About Us</a>
+        <a href="seeds.html">Seeds</a>
+        <a href="irrigation.html">Irrigation Tools</a>
+        <a href="fertilizer.html">Fertilizers</a>
+        <a href="pesticide.html">Pesticides</a>
+        <a href="loginOrSignup.html">Login/Sign Up</a>
+        <a href="bag.html">Bag</a>
     </div>
-    <nav class="lastnav">
-        <a href="index.html">Back</a>
-    </nav>
-    <script src="Search.js"></script>
-    <div id="navbar-container"></div>
+</nav>
 
-    <script src="index.js"></script>
-    
+<div class="container">
+    <div class="pesticide-item">
+        <img src="pesatlas.jpg" alt="Atlas">
+        <h2>Atlas</h2>
+        <p>180/-</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="pesticide-item">
+        <img src="pescarbine20.jpg" alt="Carbine 20%">
+        <h2>Carbine 20%</h2>
+        <p>130/-</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="pesticide-item">
+        <img src="pesdcon.jpg" alt="D-con">
+        <h2>D-con</h2>
+        <p>310/-</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="pesticide-item">
+        <img src="pesrefen.webp" alt="Refren">
+        <h2>Refren</h2>
+        <p>540/-</p>
+        <button>Buy</button>
+    </div>
+
+    <div class="pesticide-item">
+        <img src="pestebucon.jpg" alt="Tebucon">
+        <h2>Tebucon</h2>
+        <p>110/-</p>
+        <button>Buy</button>
+    </div>
+</div>
+
+<nav class="footer">
+    <a href="index.html">Back</a>
+</nav>
+<script src="search.js"></script>
 </body>
 </html>
